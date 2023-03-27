@@ -68,7 +68,7 @@ df1.shape
 sns.boxplot(x="price_per_sqft",data=df1)
 ```
 ## (3)Examine price_per_sqft column and use zscore of 3 to remove outliers.
-```
+```python
 from scipy import stats
 z = np.abs(stats.zscore(df['price_per_sqft']))
 df2 = df[(z<3)]
@@ -77,7 +77,7 @@ print(df2.shape)
 sns.boxplot(x="price_per_sqft",data=df2)
 ```
 ## (4)(i) For the data set height_weight.csv detect weight outliers using IQR method.
-```
+```python
 import pandas as pd
 import numpy as np
 import seaborn as sns
@@ -98,7 +98,7 @@ df1.shape
 sns.boxplot(x="weight",data=df1)
 ```
 ## (4)(ii) For the data set height_weight.csv detect height outliers using IQR method.
-```
+```python
 sns.boxplot(x="height",data=df)
 q1 = df['height'].quantile(0.25)
 q3 = df['height'].quantile(0.75)
